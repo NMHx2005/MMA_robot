@@ -81,23 +81,7 @@ const ConcentricCircles = () => {
                     ))}
                 </g>
 
-                {/* Vòng tròn tĩnh bên trái - tạo dải màu liên tục giữa các sóng */}
-                {[...Array(0)].map((_, index) => {
-                    const baseRadius = 200 + index * 20
-                    const opacity = Math.max(0.06, 0.15 - index * 0.0015)
-                    return (
-                        <circle
-                            key={`left-static-${index}`}
-                            cx="300"
-                            cy="800"
-                            r={baseRadius}
-                            fill="none"
-                            stroke="rgba(0, 0, 0, 0.25)"
-                            strokeWidth="1.5"
-                            opacity={opacity}
-                        />
-                    )
-                })}
+
 
                 {/* Radar pulse effect - bên trái - sóng chậm với khoảng cách */}
                 {[...Array(8)].map((_, index) => (
@@ -125,23 +109,6 @@ const ConcentricCircles = () => {
                     />
                 ))}
 
-                {/* Vòng tròn tĩnh bên phải - tạo dải màu liên tục giữa các sóng */}
-                {[...Array(0)].map((_, index) => {
-                    const baseRadius = 180 + index * 20
-                    const opacity = Math.max(0.06, 0.15 - index * 0.0015)
-                    return (
-                        <circle
-                            key={`right-static-${index}`}
-                            cx="1600"
-                            cy="400"
-                            r={baseRadius}
-                            fill="none"
-                            stroke="rgba(0, 0, 0, 0.25)"
-                            strokeWidth="1.5"
-                            opacity={opacity}
-                        />
-                    )
-                })}
 
                 {/* Radar pulse effect - bên phải - sóng chậm với khoảng cách */}
                 {[...Array(8)].map((_, index) => (
