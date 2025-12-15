@@ -1,0 +1,15 @@
+.about-page {
+  min-height: 100vh;
+  padding: 120px 40px 40px;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+

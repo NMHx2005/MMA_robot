@@ -1,0 +1,83 @@
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: normal;
+  will-change: transform;
+  transform: translate(-50%, -50%) translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Ring - vòng tròn bên ngoài với blur/glow */
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(0);
+  z-index: 1;
+  will-change: transform;
+  backface-visibility: hidden;
+  
+  /* Blur và Glow effect - nhạt hơn */
+  filter: blur(0.5px);
+  box-shadow: 
+    0 0 15px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(0, 0, 0, 0.2),
+    0 0 45px rgba(0, 0, 0, 0.15);
+  
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Dot - chấm nhỏ ở giữa ring */
+.cursor-dot {
+  width: 4px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  position: absolute;
+  /* top: 100%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* Hide default cursor on body */
+body {
+  cursor: none !important;
+}
+
+/* Hide cursor on all elements except inputs when typing */
+html:not(.loading) * {
+  cursor: none !important;
+}
+
+/* Show default cursor on input elements when focused */
+input:focus,
+textarea:focus,
+select:focus {
+  cursor: text !important;
+}
+
+/* Hide cursor on mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+  
+  html:not(.loading) * {
+    cursor: auto !important;
+  }
+}

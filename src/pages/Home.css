@@ -1,0 +1,358 @@
+.home-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.home-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  will-change: transform;
+  overflow: visible;
+}
+
+/* Removed - now using StrikeText and RobotText components */
+
+/* Header */
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 32px 142px;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.social-icons-top {
+  justify-self: start;
+}
+
+.robot-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  max-width: 868px;
+  max-height: 90vh;
+  z-index: 1;
+  will-change: transform;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.robot-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.robot-image img {
+  width: 100%;
+  height: auto;
+  max-width: 868px;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+  display: block;
+}
+
+/* Removed strike-text SVG as it's now in background */
+
+.cta-section {
+  position: absolute;
+  right: 142px;
+  top: 391px;
+  width: 411px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 24px;
+}
+
+.cta-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1d1d1d;
+  font-weight: 400;
+  margin: 0;
+}
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 250px;
+  height: 46px;
+  background-color: #1D1D1D;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: auto;
+  margin-right: 0;
+  position: relative;
+  overflow: visible;
+  /* Hexagon shape với góc cắt chéo */
+  clip-path: polygon(
+    12px 0%,
+    calc(100% - 12px) 0%,
+    100% 50%,
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0% 50%
+  );
+  /* Bo góc nhẹ ở các góc nơi cạnh thẳng gặp cạnh chéo */
+  border-radius: 2px;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta-button:hover {
+  background-color: #ffffff;
+  color: #1d1d1d;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover svg {
+  stroke: #1d1d1d;
+}
+
+.cta-button svg {
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.cta-button span {
+  pointer-events: none;
+}
+
+/* Large Desktop (1920px and above) */
+@media (min-width: 1920px) {
+  .robot-container {
+    max-width: 868px;
+    max-height: 934px;
+  }
+  
+  .robot-image img {
+    max-width: 868px;
+    max-height: 934px;
+  }
+}
+
+/* Desktop (1440px - 1919px) */
+@media (max-width: 1919px) and (min-width: 1440px) {
+  .robot-container {
+    max-width: 650px;
+    max-height: 70vh;
+  }
+  
+  .robot-image img {
+    max-width: 650px;
+    max-height: 70vh;
+  }
+  
+  .cta-section {
+    right: 80px;
+  }
+}
+
+/* Tablet Large (1024px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .page-header {
+    padding: 32px 80px;
+  }
+  
+  .robot-container {
+    max-width: 500px;
+    max-height: 65vh;
+  }
+  
+  .robot-image img {
+    max-width: 500px;
+    max-height: 65vh;
+  }
+  
+  .cta-section {
+    right: 60px;
+    width: 350px;
+    top: 350px;
+  }
+  
+  .strike-background-text {
+    font-size: 300px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .page-header {
+    padding: 24px 40px;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+  }
+  
+  .robot-container {
+    max-width: 400px;
+    max-height: 60vh;
+  }
+  
+  .robot-image img {
+    max-width: 400px;
+    max-height: 60vh;
+  }
+  
+  .cta-section {
+    right: 40px;
+    width: 300px;
+    top: 300px;
+  }
+  
+  .strike-background-text {
+    font-size: 250px;
+  }
+  
+  .hero-section {
+    left: 40px;
+    top: 150px;
+  }
+}
+
+/* Mobile Large (480px - 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .page-header {
+    padding: 20px 24px;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+  }
+  
+  .robot-container {
+    max-width: 320px;
+    max-height: 50vh;
+  }
+  
+  .robot-image img {
+    max-width: 320px;
+    max-height: 50vh;
+  }
+  
+  .cta-section {
+    right: 24px;
+    width: calc(100% - 48px);
+    max-width: 280px;
+    top: auto;
+    bottom: 120px;
+  }
+  
+  .strike-background-text {
+    font-size: 180px;
+  }
+  
+  .hero-section {
+    left: 24px;
+    top: 120px;
+    max-width: calc(100% - 48px);
+  }
+  
+  .video-card {
+    left: 24px;
+    bottom: 24px;
+  }
+}
+
+/* Mobile Small (below 480px) */
+@media (max-width: 479px) {
+  .page-header {
+    padding: 16px 20px;
+    grid-template-columns: auto 1fr auto;
+    gap: 12px;
+  }
+  
+  .robot-container {
+    max-width: 280px;
+    max-height: 45vh;
+  }
+  
+  .robot-image img {
+    max-width: 280px;
+    max-height: 45vh;
+  }
+  
+  .cta-section {
+    right: 20px;
+    width: calc(100% - 40px);
+    max-width: 260px;
+    top: auto;
+    bottom: 100px;
+  }
+  
+  .cta-description {
+    font-size: 14px;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 220px;
+    height: 42px;
+    font-size: 14px;
+  }
+  
+  .strike-background-text {
+    font-size: 120px;
+  }
+  
+  .hero-section {
+    left: 20px;
+    top: 100px;
+    max-width: calc(100% - 40px);
+  }
+  
+  .video-card {
+    left: 20px;
+    bottom: 20px;
+    width: calc(100% - 40px);
+    max-width: 220px;
+  }
+}
+

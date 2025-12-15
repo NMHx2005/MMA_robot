@@ -1,0 +1,12 @@
+.logo-container {
+  justify-self: center;
+  grid-column: 2;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  text-decoration: none;
+}
+

@@ -1,0 +1,15 @@
+.use-cases-page {
+  min-height: 100vh;
+  padding: 120px 40px 40px;
+}
+
+.use-cases-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.use-cases-content h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+

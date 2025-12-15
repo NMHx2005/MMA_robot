@@ -1,0 +1,11 @@
+.text-scramble {
+  display: inline-block;
+  font-family: monospace;
+  letter-spacing: 0.02em;
+}
+
+.scramble-char {
+  display: inline-block;
+  will-change: contents;
+}
+
