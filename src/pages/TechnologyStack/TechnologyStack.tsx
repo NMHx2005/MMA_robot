@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
-import Navigation from '../components/Navigation'
-import Logo from '../components/Logo'
+import Header from '../../components/common/Header/Header'
 import './TechnologyStack.css'
 
 const TechnologyStack = () => {
   return (
     <div className="technology-stack-page">
-      <Navigation />
-      <Logo />
+      <Header />
       <motion.div
         className="technology-stack-content"
         initial={{ opacity: 0, y: 20 }}

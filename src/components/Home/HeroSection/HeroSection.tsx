@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import TextScramble from './TextScramble'
+import TextScramble from '../../common/TextScramble/TextScramble'
 import './HeroSection.css'
 
 const HeroSection = () => {

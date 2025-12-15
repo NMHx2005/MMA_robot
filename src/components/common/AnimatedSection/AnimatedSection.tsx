@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
-import { fadeInGSAP } from '../animations/gsapUtils'
-import { fadeInUp, staggerContainer } from '../animations/framerVariants'
+import { fadeInGSAP } from '../../../animations/gsapUtils'
+import { fadeInUp, staggerContainer } from '../../../animations/framerVariants'
 
 interface AnimatedSectionProps {
   children: React.ReactNode

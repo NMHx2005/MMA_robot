@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
-import Navigation from '../components/Navigation'
-import Logo from '../components/Logo'
+import Header from '../../components/common/Header/Header'
 import './Partners.css'
 
 const Partners = () => {
   return (
     <div className="partners-page">
-      <Navigation />
-      <Logo />
+      <Header />
       <motion.div
         className="partners-content"
         initial={{ opacity: 0, y: 20 }}

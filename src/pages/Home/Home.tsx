@@ -1,14 +1,12 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { gsap } from 'gsap'
-import Navigation from '../components/Navigation'
-import Logo from '../components/Logo'
-import HeroSection from '../components/HeroSection'
-import VideoCard from '../components/VideoCard'
-import SocialIcons from '../components/SocialIcons'
-import StrikeText from '../components/StrikeText'
-import RobotText from '../components/RobotText'
-import ConcentricCircles from '../components/ConcentricCircles'
+import Header from '../../components/common/Header/Header'
+import HeroSection from '../../components/Home/HeroSection/HeroSection'
+import VideoCard from '../../components/Home/VideoCard/VideoCard'
+import StrikeText from '../../components/Home/StrikeText/StrikeText'
+import RobotText from '../../components/Home/RobotText/RobotText'
+import ConcentricCircles from '../../components/Home/ConcentricCircles/ConcentricCircles'
 import './Home.css'
 
 const Home = () => {
@@ -118,23 +116,7 @@ const Home = () => {
       </motion.div>
 
       {/* Header */}
-      <header className="page-header">
-        {/* Social Icons - Left */}
-        <motion.div
-          className="social-icons-top"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          <SocialIcons />
-        </motion.div>
-
-        {/* Logo - Center */}
-        <Logo />
-
-        {/* Navigation - Right */}
-        <Navigation />
-      </header>
+      <Header showSocialIcons={true} />
 
       {/* Hero Section */}
       <HeroSection />

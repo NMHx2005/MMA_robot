@@ -1,6 +1,6 @@
 .hero-section {
   position: absolute;
-  top: 200px;
+  top: 10%;
   left: 145px;
   z-index: 10;
   max-width: 800px;

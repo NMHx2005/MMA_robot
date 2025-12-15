@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
-import Navigation from '../components/Navigation'
-import Logo from '../components/Logo'
+import Header from '../../components/common/Header/Header'
 import './UseCases.css'
 
 const UseCases = () => {
   return (
     <div className="use-cases-page">
-      <Navigation />
-      <Logo />
+      <Header />
       <motion.div
         className="use-cases-content"
         initial={{ opacity: 0, y: 20 }}

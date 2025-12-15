@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
-import Navigation from '../components/Navigation'
-import Logo from '../components/Logo'
+import Header from '../../components/common/Header/Header'
 import './DataPlatform.css'
 
 const DataPlatform = () => {
   return (
     <div className="data-platform-page">
-      <Navigation />
-      <Logo />
+      <Header />
       <motion.div
         className="data-platform-content"
         initial={{ opacity: 0, y: 20 }}

@@ -1,0 +1,82 @@
+.data-platform-page {
+  min-height: 100vh;
+  padding: 120px 40px 40px;
+  position: relative;
+}
+
+/* Header styles moved to src/components/common/Header/Header.css */
+
+.data-platform-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.data-platform-content h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.data-platform-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Tablet Large (1024px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .data-platform-page-header {
+    padding: 32px 80px;
+  }
+
+  .data-platform-page {
+    padding: 100px 60px 40px;
+  }
+
+  .data-platform-content h1 {
+    font-size: 42px;
+  }
+}
+
+/* Mobile - Thu nhỏ nhưng giữ nguyên layout, cho phép scroll */
+@media (max-width: 1023px) {
+  .data-platform-page {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+  }
+
+}
+
+/* Mobile Large (480px - 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .data-platform-page {
+    padding: 100px 24px 40px;
+  }
+
+  .data-platform-content h1 {
+    font-size: 32px;
+  }
+
+  .data-platform-content p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Small (below 480px) */
+@media (max-width: 479px) {
+  .data-platform-page {
+    padding: 90px 20px 40px;
+  }
+
+  .data-platform-content h1 {
+    font-size: 28px;
+  }
+
+  .data-platform-content p {
+    font-size: 14px;
+  }
+}
+

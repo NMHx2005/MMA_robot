@@ -29,6 +29,29 @@ body {
   overflow: hidden;
 }
 
+/* Mobile - Allow scrolling and zoom */
+@media (max-width: 1023px) {
+  html {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  #root {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+  }
+}
+
 /* Hide cursor during loading */
 html.loading {
   cursor: none !important;
