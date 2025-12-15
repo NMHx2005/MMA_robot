@@ -2,7 +2,7 @@
 export const initLenisSmoothScroll = async () => {
   try {
     const Lenis = (await import('lenis')).default
-    
+
     const lenis = new Lenis({
       duration: 1.5, // Slower, more premium feel
       easing: (t: number) => {
@@ -15,19 +15,17 @@ export const initLenisSmoothScroll = async () => {
       gestureOrientation: 'vertical',
       smoothWheel: true,
       wheelMultiplier: 0.8, // Slower scroll speed
-      smoothTouch: false,
       touchMultiplier: 1.5,
       infinite: false,
     })
 
-    function raf(time: number) {
+    const raf = (time: number) => {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
 
     requestAnimationFrame(raf)
 
-    // Update scroll position on route change
     const handleRouteChange = () => {
       lenis.scrollTo(0, { immediate: true })
     }
@@ -45,7 +43,7 @@ export const initLenisSmoothScroll = async () => {
 // Fallback smooth scroll
 export const initSmoothScroll = () => {
   document.documentElement.style.scrollBehavior = 'smooth'
-  
+
   // Add momentum scrolling for touch devices
   if ('ontouchstart' in window) {
     let touchStartY = 0

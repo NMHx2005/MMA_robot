@@ -13,7 +13,7 @@ const TextScramble = ({ text, speed = 50, className = '' }: TextScrambleProps) =
   const [displayText, setDisplayText] = useState<string[]>([])
   const frameRef = useRef(0)
   const queueRef = useRef<Array<{ from: string; to: string; start: number; end: number }>>([])
-  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const isInitializedRef = useRef(false)
 
   useEffect(() => {
@@ -38,12 +38,12 @@ const TextScramble = ({ text, speed = 50, className = '' }: TextScrambleProps) =
     }
 
     const update = () => {
-      let output: string[] = []
+      const output: string[] = []
       let complete = 0
 
       for (let i = 0; i < queueRef.current.length; i++) {
         const { from, to, start, end } = queueRef.current[i]
-        
+
         if (frameRef.current >= end) {
           complete++
           output.push(to)
@@ -76,16 +76,16 @@ const TextScramble = ({ text, speed = 50, className = '' }: TextScrambleProps) =
       .split('')
       .map(() => chars[Math.floor(Math.random() * chars.length)])
       .join('')
-    
+
     setDisplayText(scrambled.split(''))
-    
+
     setTimeout(() => {
       setText(text)
-      
+
       if (intervalRef.current) {
         clearInterval(intervalRef.current)
       }
-      
+
       intervalRef.current = setInterval(() => {
         update()
       }, speed)

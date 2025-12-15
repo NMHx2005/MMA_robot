@@ -3,15 +3,6 @@ import { Link } from 'react-router-dom'
 import './Navigation.css'
 
 const Navigation = () => {
-  const menuItems = [
-    { label: 'Technology', path: '/technology-stack' },
-    { label: 'Training Engine', path: '/about' },
-    { label: 'Data Platform', path: '/data-platform' },
-    { label: 'Use Cases', path: '/use-cases' },
-    { label: 'Our partners', path: '/partners' },
-    { label: 'Docs', path: '/docs' },
-  ]
-
   return (
     <motion.nav
       className="navigation"
