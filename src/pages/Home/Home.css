@@ -273,10 +273,10 @@
 
   .robot-container {
     position: relative;
+    left: 50%;
+    transform-origin: center top;
     max-width: 400px;
     margin: 40px auto;
-    transform: scale(0.6);
-    transform-origin: center top;
   }
 
   .cta-section {
@@ -323,7 +323,7 @@
   }
 
   .robot-container {
-    transform: scale(0.5);
+    left: 50%;
   }
 
   .cta-section {
@@ -349,7 +349,7 @@
   }
 
   .robot-container {
-    transform: scale(0.45);
+    left: 50%;
   }
 
   .cta-section {

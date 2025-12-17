@@ -21,3 +21,10 @@
   opacity: 0.03;
 }
 
+@media (max-width: 767px) {
+  .robot-text-svg {
+    min-width: 250px;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+}
