@@ -267,10 +267,6 @@
     gap: 16px;
   }
 
-  .social-icons-top {
-    /* display: none; Ẩn social icons trên mobile */
-  }
-
   .robot-container {
     position: relative;
     left: 50%;
@@ -299,8 +295,6 @@
     max-width: 100%;
     margin: 80px auto 40px;
     padding: 0 20px;
-    transform: scale(0.7);
-    transform-origin: center;
   }
 
   .video-card {

@@ -4,6 +4,7 @@
   left: 145px;
   z-index: 10;
   max-width: 800px;
+  will-change: auto;
 }
 
 .hero-title {
@@ -37,6 +38,7 @@
 /* Dòng cuối - căn phải */
 .hero-line:nth-child(4) {
   text-align: center;
+}
 
 .char {
   display: inline-block;
@@ -55,4 +57,42 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .hero-section {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .hero-title {
+    width: 100%;
+  }
+
+  .hero-line {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .char {
+    will-change: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-line {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-line {
+    font-size: 28px;
+  }
 }

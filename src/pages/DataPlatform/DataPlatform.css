@@ -6,6 +6,13 @@
   cursor: default;
 }
 
+@media (max-width: 1023px) {
+  .data-platform-page {
+    min-height: auto;
+    overflow: visible;
+  }
+}
+
 /* Particles removed - no longer needed */
 
 /* Custom cursor for interactive HTML elements */
@@ -28,6 +35,12 @@
   padding: 5% 100px 0 20px;
   min-height: 100vh;
   align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .dp-layout {
+    min-height: auto;
+  }
 }
 
 .dp-visual {
@@ -502,20 +515,30 @@
 @media (max-width: 767px) {
   .dp-layout {
     padding: 0;
-    padding-top: 15%;
+    padding-top: 100px;
     grid-template-columns: 1fr;
+    gap: 0px;
   }
 
   .dp-visual {
-    min-height: 338px;
+    order: 1;
+    min-height: auto;
     width: 100%;
-    padding: 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dp-robot-image {
+    transform: translateY(0);
+    max-height: 400px;
   }
 
   .dp-panel {
-    order: 1;
+    order: 2;
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
     max-width: 100%;
     width: 100%;
     min-height: auto;
@@ -675,6 +698,9 @@
   .cta-button {
     width: 100%;
     max-width: 201px;
+  }
+  .dp-visual {
+    margin-bottom: -100px;
   }
 }
 
