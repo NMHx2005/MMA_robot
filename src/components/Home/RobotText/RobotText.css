@@ -3,7 +3,7 @@
   right: 0;
   top: 80%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
   user-select: none;
   width: 40vw;

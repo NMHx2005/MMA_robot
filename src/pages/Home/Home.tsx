@@ -16,7 +16,7 @@ const Home = () => {
       {/* Concentric Circles Background */}
       <ConcentricCircles />
 
-      {/* Background with STRIKE and ROBOT text */}
+      {/* Background with ROBOT text */}
       <motion.div
         ref={backgroundRef}
         className="home-background"
@@ -24,9 +24,11 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <StrikeText />
         <RobotText />
       </motion.div>
+
+      {/* STRIKE text - above robot image */}
+      <StrikeText />
 
       {/* Header */}
       <Header showSocialIcons={true} />

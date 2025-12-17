@@ -100,7 +100,7 @@ const About = () => {
                   <div className="card-number-badge">{card.id}</div>
                   <div className="card-image-pane">
                     <img src={card.image} alt={card.title} className="card-image" />
-                    {card.id === 1 && <div className="neural-scan" />}
+                    <div className="neural-scan" />
                   </div>
                   <div className="card-info">
                     <div className="card-info-corner" />
