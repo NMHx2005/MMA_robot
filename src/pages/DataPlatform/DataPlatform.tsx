@@ -2,22 +2,12 @@ import { motion } from 'framer-motion'
 import Header from '../../components/common/Header/Header'
 import './DataPlatform.css'
 import ConcentricCircles from '../../components/Home/ConcentricCircles/ConcentricCircles'
-import RobotSVG from '../../components/common/AnimatedSVG/RobotSVG'
 
 const nodes = [
   { label: 'Upload', className: 'top', icon: '/upload.png' },
   { label: 'Annotate', className: 'left', icon: '/annotate.png' },
   { label: 'Train', className: 'right', icon: '/train.png' },
   { label: 'Deploy', className: 'bottom', icon: '/deploy.png' },
-]
-
-// Annotations for the robot hand technical sketch
-// Adjust x, y coordinates based on your SVG layout
-const robotAnnotations = [
-  { id: 'hydraulic', text: 'Hydraulic System', x: 400, y: 200, anchor: 'start' as const },
-  { id: 'logic', text: 'Logic Board', x: 600, y: 400, anchor: 'middle' as const },
-  { id: 'actuator', text: 'Actuator', x: 500, y: 600, anchor: 'end' as const },
-  { id: 'sensor', text: 'Sensor Array', x: 300, y: 500, anchor: 'start' as const },
 ]
 
 const DataPlatform = () => {
@@ -28,18 +18,17 @@ const DataPlatform = () => {
       <Header showSocialIcons />
 
       <div className="dp-layout">
-        <div className="dp-visual">
-          <RobotSVG
-            annotations={robotAnnotations}
-            duration={3}
-            delay={0.3}
-            strokeColor="#000000"
-            strokeWidth={0.07}
-            onComplete={() => {
-              console.log('Robot SVG drawing animation complete!')
-            }}
+        <motion.div
+          className="dp-visual"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+        >
+          <img
+            src="/robot_data.png"
+            alt="Robot Data"
+            className="dp-robot-image"
           />
-        </div>
+        </motion.div>
         <motion.div
           className="dp-panel"
           initial={{ opacity: 0, y: 18 }}
@@ -65,6 +54,11 @@ const DataPlatform = () => {
               </div>
 
               <div className='dp-graph-wrap'>
+                {/* Mobile image - only visible on mobile */}
+                <div className="dp-graph-mobile">
+                  <img src="/bip.png" alt="Data Platform Mobile" className="dp-bip-image" />
+                </div>
+                {/* Desktop graph - hidden on mobile */}
                 <div className="dp-graph">
                   <div className="dp-node center">
                     <div className="dp-node-card">

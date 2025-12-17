@@ -6,7 +6,6 @@ import DataPlatform from './pages/DataPlatform/DataPlatform'
 import UseCases from './pages/UseCases/UseCases'
 import TechnologyStack from './pages/TechnologyStack/TechnologyStack'
 import Partners from './pages/Partners/Partners'
-import CustomCursor from './components/common/CustomCursor/CustomCursor'
 import LoadingScreen from './components/common/LoadingScreen/LoadingScreen'
 import './App.css'
 
@@ -73,7 +72,6 @@ function App() {
       <LoadingScreen onComplete={handleLoadingComplete} />
       {!isLoading && (
         <>
-          <CustomCursor />
           <Router>
             <Routes>
               <Route path="/" element={<Home />} />

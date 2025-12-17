@@ -100,33 +100,14 @@
   text-transform: uppercase;
 }
 
-/* Marquee Wrapper */
-.partners-marquee-wrapper {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.partners-marquee {
+/* Partners List */
+.partners-list {
   display: flex;
   flex-direction: row;
   gap: 16px;
   align-items: center;
-  width: fit-content;
-  animation: marquee 30s linear infinite;
-}
-
-.partners-marquee-wrapper:hover .partners-marquee {
-  animation-play-state: paused;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .partner-card {
@@ -158,7 +139,7 @@
   transition: filter 0.4s ease;
 }
 
-.partners-marquee-wrapper:hover .partner-logo {
+.partner-card:hover .partner-logo {
   filter: grayscale(0%);
 }
 
@@ -206,6 +187,68 @@
   display: block;
 }
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .partners-container {
+    padding: 100px 60px 60px;
+  }
+
+  .partners-section-inner {
+    padding: 48px;
+  }
+
+  .partners-powered-by {
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+
+  .partners-list {
+    gap: 12px;
+  }
+
+  .partner-card {
+    width: 140px;
+    height: 64px;
+  }
+
+  .partners-l-bracket {
+    width: 100px;
+    height: 100px;
+  }
+
+  .partners-l-bracket-top-left {
+    top: -12px;
+    left: -12px;
+  }
+
+  .partners-l-bracket-top-left::before {
+    height: 100px;
+  }
+
+  .partners-l-bracket-top-left::after {
+    width: 100px;
+  }
+
+  .partners-l-bracket-bottom-right {
+    bottom: -12px;
+    right: -12px;
+  }
+
+  .partners-l-bracket-bottom-right::before {
+    height: 100px;
+  }
+
+  .partners-l-bracket-bottom-right::after {
+    width: 100px;
+  }
+
+  .partners-rect-bottom {
+    left: 60px;
+    right: 60px;
+    max-width: calc(100% - 120px);
+    height: 60px;
+  }
+}
+
 @media (max-width: 1439px) {
   .partners-container {
     padding: 100px 80px 60px;
@@ -336,11 +379,7 @@
     margin-bottom: 40px;
   }
 
-  .partners-marquee {
-    gap: 12px;
-  }
-
-  .partners-grid {
+  .partners-list {
     flex-direction: column;
     gap: 12px;
     align-items: stretch;
@@ -422,11 +461,7 @@
     margin-bottom: 32px;
   }
 
-  .partners-marquee {
-    gap: 12px;
-  }
-
-  .partners-grid {
+  .partners-list {
     flex-direction: column;
     gap: 12px;
     align-items: stretch;
@@ -509,7 +544,7 @@
     margin-bottom: 24px;
   }
 
-  .partners-grid {
+  .partners-list {
     flex-direction: column;
     gap: 10px;
     align-items: stretch;

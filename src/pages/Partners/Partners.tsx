@@ -79,27 +79,15 @@ const Partners = () => {
           <div className="partners-section-inner">
             <h2 className="partners-powered-by">POWERED BY</h2>
 
-            <div className="partners-marquee-wrapper">
-              <div className="partners-marquee">
-                {/* First set */}
-                {partners.map((partner) => (
-                  <div key={`first-${partner.id}`} className="partner-card">
-                    <div
-                      className="partner-logo"
-                      dangerouslySetInnerHTML={{ __html: partner.logo }}
-                    />
-                  </div>
-                ))}
-                {/* Duplicate for seamless loop */}
-                {partners.map((partner) => (
-                  <div key={`second-${partner.id}`} className="partner-card">
-                    <div
-                      className="partner-logo"
-                      dangerouslySetInnerHTML={{ __html: partner.logo }}
-                    />
-                  </div>
-                ))}
-              </div>
+            <div className="partners-list">
+              {partners.map((partner) => (
+                <div key={partner.id} className="partner-card">
+                  <div
+                    className="partner-logo"
+                    dangerouslySetInnerHTML={{ __html: partner.logo }}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>
