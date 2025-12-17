@@ -11,7 +11,7 @@ interface HeaderProps {
     showSocialIcons?: boolean
 }
 
-const Header = ({ showSocialIcons = false }: HeaderProps) => {
+const Header = ({ showSocialIcons = true }: HeaderProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const toggleMenu = () => {

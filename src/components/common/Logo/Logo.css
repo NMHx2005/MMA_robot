@@ -56,7 +56,9 @@
   }
 
   .logo-link img {
-    max-height: 30px;
+    width: 123px;
+    height: 36px;
+    max-height: 36px;
   }
 }
 

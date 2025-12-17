@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Header from '../../components/common/Header/Header'
 import './About.css'
+import ConcentricCircles from '../../components/Home/ConcentricCircles/ConcentricCircles'
 
 const About = () => {
   const capabilities = [
@@ -12,10 +13,10 @@ const About = () => {
   const trainingCards = [
     {
       id: 1,
-      title: 'Legendary Fighting Styles',
+      title: 'Style Reasoning Engine',
       description:
-        'Emulate phong cách của các võ sĩ nổi tiếng → robot chiến đấu để so sánh.',
-      image: '/about-card-1.jpg',
+        'AI lý luận theo các môn võ khác nhau → deploy → robot đấu để benchmark.',
+      image: '/about-card-1.png',
       tone: 'dark',
     },
     {
@@ -23,21 +24,23 @@ const About = () => {
       title: 'Legendary Fighting Styles',
       description:
         'Emulate phong cách của các võ sĩ nổi tiếng → robot chiến đấu để so sánh.',
-      image: '/about-card-2.jpg',
+      image: '/about-card-2.png',
       tone: 'light',
     },
     {
       id: 3,
-      title: 'Legendary Fighting Styles',
+      title: 'Style Reasoning Engine',
       description:
-        'Emulate phong cách của các võ sĩ nổi tiếng → robot chiến đấu để so sánh.',
-      image: '/about-card-3.jpg',
+        'AI lý luận theo các môn võ khác nhau → deploy → robot đấu để benchmark.',
+      image: '/about-card-3.png',
       tone: 'light',
     },
   ]
 
   return (
     <div className="about-page">
+      {/* Concentric Circles Background */}
+      <ConcentricCircles />
       <Header />
       <div className="about-background">
         <div className="about-overlay" />
@@ -50,25 +53,29 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="about-title">ABOUT / WHAT WE DO</h1>
-          <p className="about-subtitle">
-            StrikeRobot.AI huấn luyện robot theo 3 năng lực cốt lõi:
-          </p>
+          <div className="about-lead">
+            <div className="about-headline">
+              <h1 className="about-title">ABOUT / WHAT WE DO</h1>
+              <p className="about-subtitle">
+                StrikeRobot.AI huấn luyện robot theo 3 năng lực cốt lõi:
+              </p>
+            </div>
 
-          <div className="capabilities-tags">
-            {capabilities.map((cap, index) => (
-              <motion.div
-                key={cap.label}
-                className="capability-tag"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-              >
-                <div className="tag-corner top-left" />
-                <div className="tag-corner bottom-right" />
-                <span>{cap.label}</span>
-              </motion.div>
-            ))}
+            <div className="capabilities-tags">
+              {capabilities.map((cap, index) => (
+                <motion.div
+                  key={cap.label}
+                  className="capability-tag"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                >
+                  <div className="tag-corner top-left" />
+                  <div className="tag-corner bottom-right" />
+                  <span>{cap.label}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.section>
 
@@ -84,23 +91,21 @@ const About = () => {
             {trainingCards.map((card, index) => (
               <motion.article
                 key={card.id}
-                className={`training-card ${card.tone}`}
+                className={`training-card ${card.tone} card-${card.id}`}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7 + index * 0.1, duration: 0.6 }}
               >
-                <div className="card-number">{card.id}</div>
-                <div className="card-line" />
                 <div className="card-shell">
-                  <div className="card-image-wrapper">
+                  <div className="card-number-badge">{card.id}</div>
+                  <div className="card-image-pane">
                     <img src={card.image} alt={card.title} className="card-image" />
+                    {card.id === 1 && <div className="neural-scan" />}
                   </div>
-                  <div className="card-text-wrapper">
-                    <div className="card-corner top-left" />
-                    <div className="card-text">
-                      <h3>{card.title}</h3>
-                      <p>{card.description}</p>
-                    </div>
+                  <div className="card-info">
+                    <div className="card-info-corner" />
+                    <h3 className="card-info-title">{card.title}</h3>
+                    <p className="card-info-desc">{card.description}</p>
                   </div>
                 </div>
               </motion.article>

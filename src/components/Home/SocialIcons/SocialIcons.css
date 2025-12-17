@@ -24,3 +24,15 @@
   opacity: 0.7;
 }
 
+/* Mobile */
+@media (max-width: 479px) {
+  .social-icons {
+    gap: 12px;
+  }
+
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+

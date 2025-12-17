@@ -274,7 +274,7 @@
   }
 
   .social-icons-top {
-    display: none; /* Ẩn social icons trên mobile */
+    /* display: none; Ẩn social icons trên mobile */
   }
 
   .robot-container {
@@ -350,6 +350,8 @@
   .page-header {
     padding: 10px 12px;
     gap: 10px;
+    align-items: center;
+    display: flex;
   }
 
   .robot-container {
