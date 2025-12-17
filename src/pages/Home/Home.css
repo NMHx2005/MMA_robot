@@ -162,12 +162,11 @@
 @media (min-width: 1920px) {
   .robot-container {
     max-width: 868px;
-    max-height: 934px;
+    max-height: 80%;
   }
   
   .robot-image img {
     max-width: 868px;
-    max-height: 934px;
   }
 }
 
@@ -269,10 +268,8 @@
 
   .robot-container {
     position: relative;
-    left: 50%;
     transform-origin: center top;
     max-width: 400px;
-    margin: 40px auto;
   }
 
   .cta-section {
