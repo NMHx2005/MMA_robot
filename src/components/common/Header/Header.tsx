@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Logo from '../Logo/Logo'
 import Navigation from '../Navigation/Navigation'
@@ -13,6 +13,17 @@ interface HeaderProps {
 
 const Header = ({ showSocialIcons = true }: HeaderProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY
+            setIsScrolled(scrollPosition > 10)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -24,7 +35,7 @@ const Header = ({ showSocialIcons = true }: HeaderProps) => {
 
     return (
         <>
-            <header className="page-header">
+            <header className={`page-header ${isScrolled ? 'scrolled' : ''}`}>
                 {showSocialIcons ? (
                     <motion.div
                         className="social-icons-top"
