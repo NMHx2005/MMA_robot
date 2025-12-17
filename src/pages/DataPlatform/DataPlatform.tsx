@@ -138,57 +138,31 @@ const DataPlatform = () => {
                   <div className="dp-lines">
                     {/* Upload → Annotate: vertical down */}
                     <div className="dp-line dp-line-upload-annotate">
-                      <svg width="18" height="111" viewBox="0 0 18 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="9" y1="0" x2="9" y2="111" stroke="#0A0A0A" strokeWidth="2" />
+                      <svg width="18" height="110" viewBox="0 0 18 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="9" y1="8.30516e-07" x2="9" y2="110" stroke="#0A0A0A" strokeWidth="2" />
                         <path d="M9 60.1563L1.20578 48.5547L16.7942 48.5547L9 60.1563Z" fill="#1D1D1D" />
                       </svg>
-                      <div className="dp-particles-container">
-                        <svg className="dp-particle dp-particle-1" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                        </svg>
-                        <div className="dp-particle-1">
-                          <img src="/arrow_button.png" alt="Particle" />
-                        </div>
-                      </div>
                     </div>
                     {/* Annotate → Central: diagonal up-right */}
                     <div className="dp-line dp-line-annotate-central">
-                      <svg width="70" height="70" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0" y1="96" x2="96" y2="0" stroke="#0A0A0A" strokeWidth="2" />
-                        <path d="M76 38.5143L70.125 51.7223L61.5456 38.7072L76 38.5143Z" fill="#1D1D1D" />
+                      <svg width="107" height="79" viewBox="0 0 107 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="4.95739" y1="71.0419" x2="84.4535" y2="19.1626" stroke="#0A0A0A" strokeWidth="2" />
+                        <path d="M54.5061 38.5143L48.6311 51.7223L40.0517 38.7072L54.5061 38.5143Z" fill="#1D1D1D" />
                       </svg>
-                      <div className="dp-particles-container">
-                        <svg className="dp-particle dp-particle-2 dp-particle-1" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M14.4543 0.000121649L8.57933 13.2081L-9.20868e-05 0.193016L14.4543 0.000121649Z" fill="#1D1D1D" />
-                        </svg>
-                      </div>
                     </div>
                     {/* Central → Train: diagonal down-right */}
                     <div className="dp-line dp-line-central-train">
-                      <svg width="70" height="70" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0" y1="0" x2="193" y2="193" stroke="#0A0A0A" strokeWidth="2" />
-                        <path d="M143 138.4857L137.125 125.2777L128.5456 138.2928L143 138.4857Z" fill="#1D1D1D" />
+                      <svg width="107" height="79" viewBox="0 0 107 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="-1" x2="94.9268" y2="-1" transform="matrix(-0.837446 -0.54652 -0.54652 0.837446 100.779 71.8794)" stroke="#0A0A0A" strokeWidth="2" />
+                        <path d="M51.7771 38.5143L57.6521 51.7223L66.2315 38.7072L51.7771 38.5143Z" fill="#1D1D1D" />
                       </svg>
-                      <div className="dp-particles-container">
-                        <svg className="dp-particle dp-particle-2 dp-particle-1" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M-0.000208055 0.000121649L5.87477 13.2081L14.4542 0.193016L-0.000208055 0.000121649Z" fill="#1D1D1D" />
-                        </svg>
-                      </div>
                     </div>
                     {/* Train → Deploy: vertical down */}
                     <div className="dp-line dp-line-train-deploy">
-                      <svg width="18" height="111" viewBox="0 0 18 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="9" y1="0" x2="9" y2="111" stroke="#0A0A0A" strokeWidth="2" />
-                        <path d="M9 60.1563L1.20578 48.5547L16.7942 48.5547L9 60.1563Z" fill="#1D1D1D" />
+                      <svg width="18" height="113" viewBox="0 0 18 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="9" y1="113" x2="9" y2="-1.19249e-08" stroke="#0A0A0A" strokeWidth="2" />
+                        <path d="M9 51.2031L16.7942 63.1211L1.20577 63.1211L9 51.2031Z" fill="#1D1D1D" />
                       </svg>
-                      <div className="dp-particles-container">
-                        {/* <svg className="dp-particle dp-particle-1" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.79395 11.6016L-0.000277376 -1.36497e-06L15.5882 -9.80001e-08L7.79395 11.6016Z" fill="#1D1D1D" />
-                      </svg> */}
-                        <div className="dp-particle-1">
-                          <img src="/arrow_button.png" alt="Particle" />
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>

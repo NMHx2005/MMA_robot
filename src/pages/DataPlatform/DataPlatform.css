@@ -6,14 +6,7 @@
   cursor: default;
 }
 
-/* Override any global fill: none rules for particle paths - highest specificity */
-.data-platform-page .dp-lines .dp-particles-container svg path,
-.data-platform-page .dp-line .dp-particles-container svg path,
-.data-platform-page .dp-particles-container svg.dp-particle path,
-.data-platform-page .dp-particles-container .dp-particle-2 svg path {
-  fill: #1D1D1D !important;
-  opacity: 1 !important;
-}
+/* Particles removed - no longer needed */
 
 /* Custom cursor for interactive HTML elements */
 .data-platform-page a,
@@ -359,260 +352,9 @@
   overflow: visible;
 }
 
-/* Particles container for data flow */
-.dp-particles-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: visible;
-  z-index: 10;
-}
-
-.dp-particle {
-  position: absolute;
-  pointer-events: none;
-  display: block !important;
-  visibility: visible !important;
-}
-
-/* Ensure SVG particles are always visible */
-.dp-particle svg {
-  display: block !important;
-  visibility: visible !important;
-}
-
-/* Override animation opacity - keep particles visible */
-/* Override any global fill: none rules for particle paths - use very specific selectors */
-.data-platform-page .dp-lines .dp-particles-container svg path,
-.data-platform-page .dp-line .dp-particles-container svg path,
-.dp-lines .dp-particles-container svg path,
-.dp-line .dp-particles-container svg path,
-.dp-particles-container svg path,
-.dp-particle svg path {
-  fill: #1D1D1D !important;
-  opacity: 1 !important;
-}
-
-/* Override animated-svg-container rules specifically for particles */
-.data-platform-page .dp-lines svg.dp-particle path,
-.data-platform-page .dp-particles-container svg.dp-particle path {
-  fill: #1D1D1D !important;
-  opacity: 1 !important;
-}
-
-/* Upload → Annotate: vertical down particles */
-.dp-line-upload-annotate .dp-particles-container {
-  width: 18px;
-  height: 111px;
-  left: 0;
-  top: 0;
-}
-
-.dp-line-upload-annotate .dp-particle {
-  position: relative;
-  display: block !important;
-  visibility: visible !important;
-  z-index: 999;
-  left: 1px;
-  top: 0;
-  width: 16px;
-  height: 12px;
-}
-
-.dp-line-upload-annotate .dp-particle-1 {
-  animation: moveParticleDown 2s linear infinite;
-  animation-delay: 0s;
-}
-
-.dp-line-upload-annotate .dp-particle-2 {
-  animation: moveParticleDown 2s linear infinite;
-  animation-delay: 0.67s;
-}
-
-.dp-line-upload-annotate .dp-particle-3 {
-  animation: moveParticleDown 2s linear infinite;
-  animation-delay: 1.33s;
-}
-
-@keyframes moveParticleDown {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(111px);
-  }
-}
-
-/* Annotate → Central: diagonal up-right particles */
-.dp-line-annotate-central .dp-particles-container {
-  width: 70px;
-  height: 70px;
-  left: 0;
-  top: 0;
-  position: absolute;
-}
-
-.dp-line-annotate-central .dp-particle {
-  left: 0;
-  width: 15px !important;
-  height: 14px !important;
-  position: absolute !important;
-  transform-origin: center;
-  background: transparent;
-}
-
-.dp-particle-2 {
-  background: transparent !important;
-}
-
-.dp-particle-2 svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* Override any fill: none !important rules for particle paths */
-.dp-particle-2 svg path,
-.dp-particles-container .dp-particle-2 svg path,
-.dp-line .dp-particle-2 svg path {
-  fill: #1D1D1D !important;
-  opacity: 1 !important;
-}
-.dp-line-annotate-central .dp-particle-1 {
-  position: absolute;
-  left: -18px;
-  /* top: 70px; */
-  width: 16px;
-  height: 12px;
-  transform-origin: center;
-  animation: moveParticleDiagonalUpRight 2s linear infinite;
-  animation-delay: 0s;
-}
-
-.dp-line-annotate-central .dp-particle-1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  transform: rotate(14deg);
-}
-
-.dp-line-annotate-central .dp-particle-2 {
-  animation: moveParticleDiagonalUpRight 2s linear infinite;
-  animation-delay: 0.67s;
-}
-
-.dp-line-annotate-central .dp-particle-3 {
-  animation: moveParticleDiagonalUpRight 2s linear infinite;
-  animation-delay: 1.33s;
-}
-
-@keyframes moveParticleDiagonalUpRight {
-  0% {
-    transform: translate(0, 70px) rotate(104deg);
-  }
-  100% {
-    transform: translate(70px, 0) rotate(104deg);
-  }
-}
-
-/* Central → Train: diagonal down-right particles */
-.dp-line-central-train .dp-particles-container {
-  width: 70px;
-  height: 70px;
-  left: 0;
-  top: 0;
-  position: absolute;
-}
-
-.dp-line-central-train .dp-particle {
-  left: 0;
-  top: 0;
-  width: 15px !important;
-  height: 14px !important;
-  position: absolute !important;
-  transform-origin: center;
-}
-
-.dp-line-central-train .dp-particle-1 {
-  position: absolute;
-  left: -8px;
-  top: -6px;
-  width: 16px;
-  height: 12px;
-  transform-origin: center;
-  animation: moveParticleDiagonalDownRight 2s linear infinite;
-  animation-delay: 0s;
-}
-
-.dp-line-central-train .dp-particle-1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  transform: rotate(-8deg);
-}
-
-.dp-line-central-train .dp-particle-2 {
-  animation: moveParticleDiagonalDownRight 2s linear infinite;
-  animation-delay: 0.67s;
-}
-
-.dp-line-central-train .dp-particle-3 {
-  animation: moveParticleDiagonalDownRight 2s linear infinite;
-  animation-delay: 1.33s;
-}
-
-@keyframes moveParticleDiagonalDownRight {
-  0% {
-    transform: translate(0, 0) rotate(80deg);
-  }
-  100% {
-    transform: translate(70px, 70px) rotate(80deg);
-  }
-}
-
-/* Train → Deploy: vertical down particles */
-.dp-line-train-deploy .dp-particles-container {
-  width: 18px;
-  height: 111px;
-  left: 0;
-  top: 0;
-  position: absolute;
-}
-
-.dp-line-train-deploy .dp-particle {
-  left: 1px;
-  top: 0;
-  width: 16px !important;
-  height: 12px !important;
-  position: absolute !important;
-}
-
-.dp-line-train-deploy .dp-particle-1 {
-  animation: moveParticleDown 2s linear infinite;
-  animation-delay: 0s;
-}
-
-.dp-line-train-deploy .dp-particle-2 {
-  animation: moveParticleDown 2s linear infinite;
-  animation-delay: 0.67s;
-}
-
-.dp-line-train-deploy .dp-particle-3 {
-  animation: moveParticleDown 2s linear infinite;
-  animation-delay: 1.33s;
-}
+/* Particles removed - no animations needed */
 
 /* Upload → Annotate: vertical down */
-/* Upload node: left=0, top=0, width=144, height=171, center=(72, 85.5) */
-/* Upload bottom point (center bottom): (72, 171) */
-/* Annotate node: left=0, top=282, width=144, height=171, center=(72, 367.5) */
-/* Annotate top point (center top): (72, 282) */
-/* Distance: 111px */
 .dp-line-upload-annotate {
   left: 72px;
   top: 171px;
@@ -620,46 +362,21 @@
 }
 
 /* Annotate → Central: diagonal up-right */
-/* Annotate: left=0, top=282, width=144, height=171 */
-/* Annotate top-right vertex from path: (0 + 143.5, 282 + 42.4971) = (143.5, 324.5) */
-/* Central: left=222, top=89, width=201, height=239 */
-/* Central bottom-left vertex from path: (222 + 0.698, 89 + 179.099) = (222.7, 268.1) */
-/* dx=79.2, dy=-56.4, distance ≈ 97px, angle ≈ -35.5° */
 .dp-line-annotate-central {
-  left: 160.5px;
-    top: 255.5px;
+  left: 140.5px;
+    top: 250.5px;
     transform-origin: 0 0;
-    transform: rotate(14deg);
+    transform: rotate(1deg);
 }
 
 /* Central → Train: diagonal down-right */
-/* Central: left=222, top=89, width=201, height=239 */
-/* Central top-right vertex from path: (222 + 200.302, 89 + 59.3188) = (422.3, 148.3) */
-/* Train: left=501, top=282, width=144, height=171 */
-/* Train top-left vertex from path: (501 + 0.5, 282 + 42.4971) = (501.5, 324.5) */
-/* dx=79.2, dy=176.2, distance ≈ 193px, angle ≈ 66° */
 .dp-line-central-train {
-      left: 422.3px;
-    top: 265.3px;
+      left: 400.3px;
+    top: 250.3px;
     transform-origin: 0 0;
-    transform: rotate(352deg);
 }
 
 /* Train → Deploy: vertical down */
-/* Train: left=501, top=282, width=144, height=171 */
-/* Train bottom vertex: (501 + 72, 282 + 171) = (573, 453) */
-/* Deploy: left=501, top=0, width=144, height=171 */
-/* Deploy top vertex: (501 + 72, 0) = (573, 0) */
-/* But this doesn't match image - Deploy should be below Train */
-/* For now, connecting from Train bottom to Deploy top */
-/* Distance: 453px (but this seems wrong - Deploy should be repositioned) */
-/* Actually, from image: Train → Deploy goes down, so Deploy should be below */
-/* If Deploy is at bottom-center, it should be around (222, ~400) */
-/* But CSS shows (501, 0) which is top-right */
-/* I'll assume Deploy needs repositioning, but for now make line work */
-/* Train bottom: (573, 453) */
-/* If Deploy is actually at bottom, let's say around (573, ~500) */
-/* But CSS shows top=0, so let me just make it connect */
 .dp-line-train-deploy {
   right: 58px;
   top: 171px;
@@ -898,10 +615,7 @@
     /* right: none; */
   }
 
-  /* Hide particles on very small screens for performance */
-  .dp-particles-container {
-    display: none;
-  }
+  /* Particles removed */
 
   /* Graph hidden on mobile - replaced by bip.png */
   .dp-node.top {
