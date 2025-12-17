@@ -1,6 +1,5 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { motion } from 'framer-motion'
-import { gsap } from 'gsap'
 import Header from '../../components/common/Header/Header'
 import HeroSection from '../../components/Home/HeroSection/HeroSection'
 import VideoCard from '../../components/Home/VideoCard/VideoCard'
@@ -11,92 +10,6 @@ import './Home.css'
 
 const Home = () => {
   const backgroundRef = useRef<HTMLDivElement>(null)
-  const robotRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (!robotRef.current) return
-
-    // Initial animation with GSAP - smoother
-    gsap.fromTo(
-      robotRef.current,
-      { opacity: 0, scale: 0.95 },
-      {
-        opacity: 1,
-        scale: 1,
-        duration: 1.2,
-        ease: 'power2.out',
-        delay: 0.3,
-        force3D: true,
-        onComplete: () => {
-          // Start breathing animation after initial animation
-          startBreathing()
-        }
-      }
-    )
-
-    // Robot parallax on mouse move
-    let mouseX = 0
-    let mouseY = 0
-    let currentX = 0
-    let currentY = 0
-    let breathingY = 0
-    let rafId: number
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const { clientX, clientY } = e
-      const { innerWidth, innerHeight } = window
-
-      mouseX = (clientX / innerWidth - 0.5) * 30
-      mouseY = (clientY / innerHeight - 0.5) * 30
-    }
-
-    // Breathing animation
-    let breathingTime = 0
-    const startBreathing = () => {
-      const updateBreathing = () => {
-        breathingTime += 0.016 // ~60fps
-        breathingY = Math.sin(breathingTime * (Math.PI / 3)) * 8 // 3 seconds cycle, 8px amplitude
-      }
-      updateBreathing()
-    }
-
-    // Smooth parallax update with breathing combined
-    const updateParallax = () => {
-      if (robotRef.current) {
-        // Smoother interpolation
-        currentX += (mouseX - currentX) * 0.15
-        currentY += (mouseY - currentY) * 0.15
-
-        // Update breathing
-        breathingTime += 0.016
-        breathingY = Math.sin(breathingTime * (Math.PI / 3)) * 8
-
-        // Combine parallax and breathing - maintain center position with xPercent
-        gsap.set(robotRef.current, {
-          xPercent: -50, // Keep centered horizontally
-          x: -currentX, // Add parallax offset
-          y: -currentY + breathingY,
-          force3D: true,
-        })
-
-        rafId = requestAnimationFrame(updateParallax)
-      }
-    }
-
-    // Start parallax after initial animation
-    setTimeout(() => {
-      updateParallax()
-    }, 1500)
-
-    window.addEventListener('mousemove', handleMouseMove, { passive: true })
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-      if (rafId) {
-        cancelAnimationFrame(rafId)
-      }
-    }
-  }, [])
 
   return (
     <div className="home-page">
@@ -121,8 +34,8 @@ const Home = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Robot Image with Parallax */}
-      <div ref={robotRef} className="robot-container">
+      {/* Robot Image */}
+      <div className="robot-container">
         <div className="robot-image">
           <img src="/robot.png" alt="Robot" />
         </div>

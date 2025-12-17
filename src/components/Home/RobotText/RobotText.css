@@ -11,7 +11,7 @@
   min-width: 600px;
   max-width: 1000px;
   opacity: 0.2;
-  filter: grayscale(100%) opacity(0.2);
+  
 }
 
 .robot-svg {

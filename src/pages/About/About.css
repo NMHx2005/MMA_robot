@@ -55,7 +55,7 @@
 
 .about-title {
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: -1px;
   color: #0a0a0a;
@@ -126,7 +126,7 @@
 
 .training-engine-title {
   font-size: 64px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: -2px;
   color: #0a0a0a;
@@ -143,8 +143,19 @@
   position: relative;
 }
 
+.training-cards:hover .training-card {
+  filter: blur(4px);
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.training-cards:hover .training-card:hover {
+  filter: blur(0);
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .training-card {
   position: relative;
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-shell {
@@ -154,11 +165,16 @@
   overflow: hidden;
   background: #ffffff;
   border: 1px solid #e6e6e6;
+  transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .training-card.dark .card-shell {
-  background: #1d1d1d;
+  background: #ffffff;
   /* border-color: #1d1d1d; */
+}
+
+.training-card:hover .card-shell {
+  background: #000000 !important;
 }
 
 .card-shell::before {
@@ -194,7 +210,7 @@
   top: 14px;
   right: 18px;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   color: #1d1d1d;
   z-index: 3;
 }
@@ -243,17 +259,10 @@
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.35);
   z-index: 4;
-  opacity: 0;
-  transform: translateY(8px);
-  pointer-events: none;
-  transition: opacity 0.28s ease, transform 0.28s ease;
-}
-
-.training-card:hover .card-info,
-.training-card:focus-within .card-info {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+  transition: opacity 0.28s ease, transform 0.28s ease;
 }
 
 .card-info-corner {
@@ -269,7 +278,7 @@
 
 .card-info-title {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: #1d1d1d;
   margin: 0 0 10px 0;
 }
