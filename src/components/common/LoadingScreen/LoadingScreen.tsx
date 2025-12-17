@@ -46,7 +46,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
             >
-              <div className={`logo-container ${showGlitch ? 'glitch' : ''}`}>
+              <div className={`logo-container-loading ${showGlitch ? 'glitch' : ''}`}>
                 <div className="logo-text">
                   <img src="/logo.png" alt="Strike" />
                 </div>
