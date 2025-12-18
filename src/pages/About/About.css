@@ -75,13 +75,22 @@
 .capabilities-tags {
   display: flex;
   gap: 32px;
-  flex-wrap: nowrap;
-  margin-top: 0;
-  max-width: 769px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  max-width: 100%;
   justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.capabilities-label {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1d1d1d;
+  margin: 0 0 16px 0;
 }
 
 .capability-tag {

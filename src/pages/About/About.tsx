@@ -15,7 +15,7 @@ const About = () => {
       id: 1,
       title: 'Style Reasoning Engine',
       description:
-        'AI lý luận theo các môn võ khác nhau → deploy → robot đấu để benchmark.',
+        'Teach robots to reason in distinct martial arts frameworks.',
       image: '/about-card-1.png',
       tone: 'dark',
     },
@@ -23,15 +23,15 @@ const About = () => {
       id: 2,
       title: 'Legendary Fighting Styles',
       description:
-        'Emulate phong cách của các võ sĩ nổi tiếng → robot chiến đấu để so sánh.',
+        'Emulate the signature movements of iconic fighters.',
       image: '/about-card-2.png',
       tone: 'light',
     },
     {
       id: 3,
-      title: 'Style Reasoning Engine',
+      title: 'Autonomous Engagement Engine',
       description:
-        'AI lý luận theo các môn võ khác nhau → deploy → robot đấu để benchmark.',
+        'Perceive. Decide. Act. Repeat.',
       image: '/about-card-3.png',
       tone: 'light',
     },
@@ -55,13 +55,14 @@ const About = () => {
         >
           <div className="about-lead">
             <div className="about-headline">
-              <h1 className="about-title">ABOUT / WHAT WE DO</h1>
+              <h1 className="about-title">WHAT WE DO</h1>
               <p className="about-subtitle">
-                StrikeRobot.AI huấn luyện robot theo 3 năng lực cốt lõi:
+                STRIKEROBOT.AI trains humanoid robots through three core intelligence pillars, turning combat into a benchmark for real-world embodied AI. We do not teach robots scripted motions. We teach them how to reason, adapt, and act physically under adversarial, dynamic conditions.
               </p>
             </div>
 
             <div className="capabilities-tags">
+              <p className="capabilities-label">Core pillars:</p>
               {capabilities.map((cap, index) => (
                 <motion.div
                   key={cap.label}

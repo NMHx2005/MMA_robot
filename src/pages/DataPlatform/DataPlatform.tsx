@@ -30,9 +30,9 @@ const DataPlatform = () => {
             <div className='dp-panel-inner-content'>
               <div className="dp-title-wrap">
                 <img src="/data_image_right.png" className='dp-image-right' alt="Decorative Rect Top" />
-                <h1>DECENTRALIZED DATA PLATFORM</h1>
+                <h1>Decentralized Robotics Data Platform</h1>
                 <p className="dp-sub">
-                  The <strong>combat-data</strong> layer for robotics.
+                  High-quality data is a critical requirement for embodied intelligence, yet robotics data is expensive and difficult to scale. STRIKEROBOT.AI addresses this challenge through a decentralized data-labeling platform tailored specifically to robotics.
                 </p>
               </div>
 
@@ -48,12 +48,17 @@ const DataPlatform = () => {
               </div>
 
               <div className='dp-cta-wrap'>
-                <button className="cta-button magnetic">
-                  <span>Join Early Access</span>
+                <a 
+                  href="https://strikerobot.gitbook.io/strikerobot" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="cta-button magnetic"
+                >
+                  <span>Docs</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.28125 2.625L17.5014 10.8451C18.0872 11.4309 18.0872 12.3807 17.5014 12.9664L9.28125 21.1866" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           </div>

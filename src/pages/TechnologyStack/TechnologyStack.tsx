@@ -8,31 +8,28 @@ const TechnologyStack = () => {
   const listRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(listRef, { once: true, margin: '-100px' })
 
+  const romanNumerals = ['I', 'II', 'III', 'IV']
+
   const technologies = [
     {
       id: 1,
-      title: 'AI Reasoning Layer (style logic, fighting decision)',
+      title: 'Multi-Style Martial Arts Reasoning',
       isActive: true, // Item đầu tiên có background đen khi hover
       image: '/tech-1.jpg', // Optional background image
     },
     {
       id: 2,
-      title: 'Simulation Layer (style-vs-style engine)',
+      title: 'Fighter-Signature Training',
       isActive: false,
     },
     {
       id: 3,
-      title: 'Robotics Deployment (embodied fighting)',
+      title: 'Sensor-Driven Autonomous Combat',
       isActive: false,
     },
     {
       id: 4,
-      title: 'Sensor Perception (distance & threat detection)',
-      isActive: false,
-    },
-    {
-      id: 5,
-      title: 'Data Layer (combat datasets)',
+      title: 'Decentralized Robotics Data Platform',
       isActive: false,
     },
   ]
@@ -50,8 +47,8 @@ const TechnologyStack = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="technology-stack-title">TECHNOLOGY STACK</h1>
-          <p className="technology-stack-subtitle">The combat-data layer for robotics.</p>
+          <h1 className="technology-stack-title">Core Framework</h1>
+          <p className="technology-stack-subtitle">The STRIKEROBOT.AI platform is structured around four core pillars that together enable expressive, autonomous, and scalable humanoid combat intelligence. Each pillar addresses a distinct challenge in embodied AI, while remaining tightly integrated with the others.</p>
         </motion.div>
 
         {/* Technology Items List */}
@@ -77,7 +74,7 @@ const TechnologyStack = () => {
               </div>
               <div className="tech-item-content">
                 <h2 className="tech-item-title">{tech.title}</h2>
-                <span className="tech-item-number">I</span>
+                <span className="tech-item-number">{romanNumerals[index]}</span>
               </div>
             </motion.div>
           ))}

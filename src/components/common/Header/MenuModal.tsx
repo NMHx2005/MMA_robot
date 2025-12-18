@@ -9,8 +9,8 @@ interface MenuModalProps {
 
 const MenuModal = ({ isOpen, onClose }: MenuModalProps) => {
   const navLinks = [
-    { to: '/technology-stack', label: 'Technology' },
     { to: '/about', label: 'Training Engine' },
+    { to: '/technology-stack', label: 'Technology' },
     { to: '/data-platform', label: 'Data Platform' },
     { to: '/use-cases', label: 'Use Cases' },
     { to: '/docs', label: 'Docs' },

@@ -12,11 +12,11 @@ const Navigation = () => {
     >
       <div className="nav-grid">
         <div className="nav-column">
-          <Link to="/technology-stack" className="nav-link magnetic">
-            Technology
-          </Link>
           <Link to="/about" className="nav-link magnetic">
             Training Engine
+          </Link>
+          <Link to="/technology-stack" className="nav-link magnetic">
+            Technology
           </Link>
         </div>
         <div className="nav-column">
