@@ -38,8 +38,10 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: min(868px, 80vw);
+  height: min(80vh, calc(868px * 1.2));
   max-width: 868px;
-  max-height: 90vh;
+  max-height: 80vh;
   z-index: 3;
   pointer-events: none;
   display: flex;
@@ -52,16 +54,17 @@
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
 .robot-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: 868px;
-  max-height: 100%;
+  max-height: 80vh;
   object-fit: contain;
+  object-position: bottom center;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
   display: block;
 }
@@ -160,25 +163,30 @@
 /* Large Desktop (1920px and above) */
 @media (min-width: 1920px) {
   .robot-container {
+    width: min(868px, 80vw);
+    height: min(80vh, calc(868px * 1.2));
     max-width: 868px;
-    max-height: 80%;
+    max-height: 80vh;
   }
   
   .robot-image img {
     max-width: 868px;
+    max-height: 80vh;
   }
 }
 
 /* Desktop (1440px - 1919px) */
 @media (max-width: 1919px) and (min-width: 1440px) {
   .robot-container {
+    width: min(650px, 80vw);
+    height: min(80vh, calc(650px * 1.2));
     max-width: 650px;
-    max-height: 70vh;
+    max-height: 80vh;
   }
   
   .robot-image img {
     max-width: 650px;
-    max-height: 70vh;
+    max-height: 80vh;
   }
   
   .cta-section {
@@ -193,13 +201,15 @@
   }
   
   .robot-container {
+    width: min(500px, 80vw);
+    height: min(80vh, calc(500px * 1.2));
     max-width: 500px;
-    max-height: 65vh;
+    max-height: 80vh;
   }
   
   .robot-image img {
     max-width: 500px;
-    max-height: 65vh;
+    max-height: 80vh;
   }
   
   .cta-section {
@@ -217,13 +227,15 @@
 @media (max-width: 1023px) and (min-width: 768px) {
   
   .robot-container {
+    width: min(400px, 80vw);
+    height: min(80vh, calc(400px * 1.2));
     max-width: 400px;
-    max-height: 60vh;
+    max-height: 80vh;
   }
   
   .robot-image img {
     max-width: 400px;
-    max-height: 60vh;
+    max-height: 80vh;
   }
   
   .cta-section {
