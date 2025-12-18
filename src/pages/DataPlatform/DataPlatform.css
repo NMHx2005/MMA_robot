@@ -1,7 +1,7 @@
 .data-platform-page {
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   background: #E1E1E1;
   cursor: default;
 }
@@ -51,8 +51,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  overflow: visible;
   z-index: 1;
+  contain: layout style paint;
 }
 
 .dp-robot-image {
@@ -196,7 +196,6 @@
   align-items: center;
   gap: 16px;
   position: relative;
-  transition: all 0.3s ease;
 }
 
 /* Glowing border animation between outer and inner hexagon */
@@ -259,12 +258,10 @@
   max-height: 60%;
   object-fit: contain;
   z-index: 1;
-  transition: transform 0.3s ease;
 }
 
 /* Hover effect: brighten hexagon and scale icon */
 .dp-node-card {
-  transition: all 0.3s ease;
 }
 
 .dp-node-card:hover {
@@ -408,7 +405,6 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;

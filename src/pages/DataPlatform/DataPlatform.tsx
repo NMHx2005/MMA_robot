@@ -18,23 +18,14 @@ const DataPlatform = () => {
       <Header showSocialIcons />
 
       <div className="dp-layout">
-        <motion.div
-          className="dp-visual"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-        >
+        <div className="dp-visual">
           <img
             src="/robot_data.png"
             alt="Robot Data"
             className="dp-robot-image"
           />
-        </motion.div>
-        <motion.div
-          className="dp-panel"
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
+        </div>
+        <div className="dp-panel">
 
           <div className="dp-panel-inner">
             {/* Decorative rectangles */}
@@ -169,20 +160,16 @@ const DataPlatform = () => {
               </div>
 
               <div className='dp-cta-wrap'>
-                <motion.button
-                  className="cta-button magnetic"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
+                <button className="cta-button magnetic">
                   <span>Join Early Access</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.28125 2.625L17.5014 10.8451C18.0872 11.4309 18.0872 12.3807 17.5014 12.9664L9.28125 21.1866" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                   </svg>
-                </motion.button>
+                </button>
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div >
     </div >
   )

@@ -25,48 +25,6 @@ function App() {
     setIsLoading(false)
   }
 
-  // Smooth inertia scroll (desktop only, light-weight)
-  useEffect(() => {
-    if (isLoading) return
-    const isFinePointer = window.matchMedia('(pointer: fine)').matches
-    if (!isFinePointer) return
-
-    let target = window.scrollY
-    let current = window.scrollY
-    let rafId: number | null = null
-    const ease = 0.08
-
-    const clampTarget = () => {
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight
-      target = Math.max(0, Math.min(target, maxScroll))
-    }
-
-    const animate = () => {
-      const diff = target - current
-      current += diff * ease
-      window.scrollTo(0, current)
-      if (Math.abs(diff) > 0.4) {
-        rafId = requestAnimationFrame(animate)
-      } else {
-        current = target
-        rafId = null
-      }
-    }
-
-    const onWheel = (event: WheelEvent) => {
-      event.preventDefault()
-      target += event.deltaY
-      clampTarget()
-      if (!rafId) rafId = requestAnimationFrame(animate)
-    }
-
-    window.addEventListener('wheel', onWheel, { passive: false })
-    return () => {
-      window.removeEventListener('wheel', onWheel)
-      if (rafId) cancelAnimationFrame(rafId)
-    }
-  }, [isLoading])
-
   return (
     <>
       <LoadingScreen onComplete={handleLoadingComplete} />

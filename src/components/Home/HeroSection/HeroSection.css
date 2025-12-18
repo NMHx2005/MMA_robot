@@ -4,7 +4,6 @@
   left: 145px;
   z-index: 10;
   max-width: 800px;
-  will-change: auto;
 }
 
 .hero-title {
@@ -42,7 +41,6 @@
 
 .char {
   display: inline-block;
-  will-change: transform, opacity;
 }
 
 @media (max-width: 1440px) {

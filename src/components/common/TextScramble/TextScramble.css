@@ -5,6 +5,5 @@
 
 .scramble-char {
   display: inline-block;
-  will-change: contents;
 }
 
