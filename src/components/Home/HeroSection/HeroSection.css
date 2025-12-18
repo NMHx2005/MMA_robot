@@ -13,7 +13,7 @@
 }
 
 .hero-line {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 1.1;
   color: #0a0a0a;
@@ -45,13 +45,13 @@
 
 @media (max-width: 1440px) {
   .hero-line {
-    font-size: 56px;
+    font-size: 44px;
   }
 }
 
 @media (max-width: 1024px) {
   .hero-line {
-    font-size: 42px;
+    font-size: 34px;
   }
 }
 
@@ -74,7 +74,7 @@
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    font-size: 32px;
+    font-size: 26px;
     letter-spacing: -1px;
   }
 
@@ -85,12 +85,12 @@
 
 @media (max-width: 767px) {
   .hero-line {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 479px) {
   .hero-line {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
