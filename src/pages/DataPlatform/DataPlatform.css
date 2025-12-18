@@ -67,7 +67,6 @@
   position: relative;
   z-index: 1;
   transform-origin: center top;
-  transform: translateY(-150px);
 }
 
 .dp-panel {
@@ -199,10 +198,6 @@
     flex-direction: column;
   }
 
-  .dp-robot-image {
-    transform: translateY(0px);
-  }
-
   .dp-visual {
     order: 1;
     min-height: 400px;
@@ -262,7 +257,6 @@
   }
 
   .dp-robot-image {
-    transform: translateY(0);
     max-height: 400px;
   }
 
