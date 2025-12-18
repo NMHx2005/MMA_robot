@@ -54,25 +54,11 @@ const DataPlatform = () => {
                   <div className="dp-node center">
                     <div className="dp-node-card">
                       <svg width="201" height="239" viewBox="0 0 201 239" fill="none" xmlns="http://www.w3.org/2000/svg" className="dp-node-svg-outer">
-                        {/* Outer hexagon for center node */}
-                        <path className="dp-hex-outer" d="M200.302 59.3188L200.302 179.099C200.302 180.859 199.355 182.484 197.823 183.351L102.907 237.086C101.414 237.932 99.586 237.932 98.0928 237.086L3.17675 183.351C1.64504 182.484 0.698234 180.859 0.698234 179.099L0.69824 59.3188C0.6983 57.5588 1.64509 55.935 3.17676 55.0679L98.0928 1.33252C99.586 0.487149 101.414 0.487149 102.907 1.33252L197.823 55.0679C199.355 55.935 200.302 57.5588 200.302 59.3188Z" fill="white" stroke="#999999" strokeWidth="1.39583" />
-                        {/* Glowing border between outer and inner hexagon */}
-                        <path className="dp-hex-glow" d="M200.302 59.3188L200.302 179.099C200.302 180.859 199.355 182.484 197.823 183.351L102.907 237.086C101.414 237.932 99.586 237.932 98.0928 237.086L3.17675 183.351C1.64504 182.484 0.698234 180.859 0.698234 179.099L0.69824 59.3188C0.6983 57.5588 1.64509 55.935 3.17676 55.0679L98.0928 1.33252C99.586 0.487149 101.414 0.487149 102.907 1.33252L197.823 55.0679C199.355 55.935 200.302 57.5588 200.302 59.3188Z" fill="none" stroke="url(#glow-gradient-center)" strokeWidth="4" />
-                        <defs>
-                          <linearGradient id="glow-gradient-center" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="rgba(255, 255, 255, 0)" />
-                            <stop offset="15%" stopColor="rgba(255, 255, 255, 1)" />
-                            <stop offset="30%" stopColor="rgba(255, 255, 255, 1)" />
-                            <stop offset="50%" stopColor="rgba(255, 255, 255, 1)" />
-                            <stop offset="70%" stopColor="rgba(255, 255, 255, 1)" />
-                            <stop offset="85%" stopColor="rgba(255, 255, 255, 1)" />
-                            <stop offset="100%" stopColor="rgba(255, 255, 255, 0)" />
-                            <animateTransform attributeName="gradientTransform" type="rotate" values="0 100.5 119.5;360 100.5 119.5" dur="7s" repeatCount="indefinite" />
-                          </linearGradient>
-                        </defs>
-                        {/* Inner hexagon */}
+                        {/* Outer hexagon - thin border */}
+                        <path className="dp-hex-outer" d="M200.302 59.3188L200.302 179.099C200.302 180.859 199.355 182.484 197.823 183.351L102.907 237.086C101.414 237.932 99.586 237.932 98.0928 237.086L3.17675 183.351C1.64504 182.484 0.698234 180.859 0.698234 179.099L0.69824 59.3188C0.6983 57.5588 1.64509 55.935 3.17676 55.0679L98.0928 1.33252C99.586 0.487149 101.414 0.487149 102.907 1.33252L197.823 55.0679C199.355 55.935 200.302 57.5588 200.302 59.3188Z" fill="white" stroke="#999999" />
+                        {/* Inner hexagon - thick border */}
                         <g transform="translate(12.5, 15.5)">
-                          <path d="M173.083 52.0522L173.083 155.667C173.083 156.675 172.54 157.604 171.663 158.099L89.3096 204.568C88.4581 205.048 87.4169 205.048 86.5654 204.568L4.21191 158.099C3.33468 157.604 2.79199 156.675 2.79199 155.667L2.79199 52.0522C2.79199 51.045 3.33469 50.1156 4.21191 49.6206L86.5654 3.15185C87.4169 2.67139 88.4581 2.6714 89.3096 3.15185L171.663 49.6206C172.54 50.1156 173.083 51.045 173.083 52.0522Z" fill="white" stroke="#1D1D1D" strokeWidth="5.58333" />
+                          <path d="M173.083 52.0522L173.083 155.667C173.083 156.675 172.54 157.604 171.663 158.099L89.3096 204.568C88.4581 205.048 87.4169 205.048 86.5654 204.568L4.21191 158.099C3.33468 157.604 2.79199 156.675 2.79199 155.667L2.79199 52.0522C2.79199 51.045 3.33469 50.1156 4.21191 49.6206L86.5654 3.15185C87.4169 2.67139 88.4581 2.6714 89.3096 3.15185L171.663 49.6206C172.54 50.1156 173.083 51.045 173.083 52.0522Z" fill="white" stroke="#1D1D1D" strokeWidth="4" />
                         </g>
                         {/* Icon image centered */}
                         <foreignObject x="0" y="0" width="201" height="239">
@@ -94,23 +80,9 @@ const DataPlatform = () => {
                     >
                       <div className="dp-node-card">
                         <svg width="144" height="171" viewBox="0 0 144 171" fill="none" xmlns="http://www.w3.org/2000/svg" className="dp-node-svg-outer">
-                          {/* Outer hexagon (larger) */}
+                          {/* Outer hexagon - thin border */}
                           <path className="dp-hex-outer" d="M143.5 42.4971L143.5 128.31C143.5 129.57 142.822 130.734 141.725 131.355L73.7246 169.853C72.6548 170.458 71.3452 170.458 70.2754 169.853L2.27538 131.355C1.17816 130.734 0.499994 129.57 0.499994 128.31L0.499998 42.4971C0.499998 41.2361 1.17816 40.0724 2.27539 39.4512L70.2754 0.954098C71.3452 0.348462 72.6548 0.348462 73.7246 0.954098L141.725 39.4512C142.822 40.0725 143.5 41.2361 143.5 42.4971Z" fill="white" stroke="#999999" />
-                          {/* Glowing border between outer and inner hexagon */}
-                          <path className="dp-hex-glow" d="M143.5 42.4971L143.5 128.31C143.5 129.57 142.822 130.734 141.725 131.355L73.7246 169.853C72.6548 170.458 71.3452 170.458 70.2754 169.853L2.27538 131.355C1.17816 130.734 0.499994 129.57 0.499994 128.31L0.499998 42.4971C0.499998 41.2361 1.17816 40.0724 2.27539 39.4512L70.2754 0.954098C71.3452 0.348462 72.6548 0.348462 73.7246 0.954098L141.725 39.4512C142.822 40.0725 143.5 41.2361 143.5 42.4971Z" fill="none" stroke={`url(#glow-gradient-${n.label.toLowerCase()})`} strokeWidth="3.5" />
-                          <defs>
-                            <linearGradient id={`glow-gradient-${n.label.toLowerCase()}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stopColor="rgba(255, 255, 255, 0)" />
-                              <stop offset="15%" stopColor="rgba(255, 255, 255, 1)" />
-                              <stop offset="30%" stopColor="rgba(255, 255, 255, 1)" />
-                              <stop offset="50%" stopColor="rgba(255, 255, 255, 1)" />
-                              <stop offset="70%" stopColor="rgba(255, 255, 255, 1)" />
-                              <stop offset="85%" stopColor="rgba(255, 255, 255, 1)" />
-                              <stop offset="100%" stopColor="rgba(255, 255, 255, 0)" />
-                              <animateTransform attributeName="gradientTransform" type="rotate" values="0 72 85.5;360 72 85.5" dur="7s" repeatCount="indefinite" />
-                            </linearGradient>
-                          </defs>
-                          {/* Inner hexagon (smaller, centered) */}
+                          {/* Inner hexagon - thick border */}
                           <g transform="translate(9, 11)">
                             <path d="M124 37.291L124 111.523C124 112.245 123.611 112.911 122.982 113.266L63.9824 146.557C63.3727 146.9 62.6274 146.9 62.0176 146.557L3.01757 113.266C2.38912 112.911 2 112.245 2 111.523L2 37.291C2 36.5694 2.38913 35.9034 3.01758 35.5488L62.0176 2.25781C62.6273 1.91397 63.3726 1.91397 63.9824 2.25781L122.982 35.5488C123.611 35.9034 124 36.5694 124 37.291Z" fill="white" stroke="#1D1D1D" strokeWidth="4" />
                           </g>

@@ -207,19 +207,8 @@
     drop-shadow(0 0 24px rgba(255, 255, 255, 0.8))
     drop-shadow(0 0 30px rgba(255, 255, 255, 0.6))
     drop-shadow(0 0 36px rgba(255, 255, 255, 0.4));
-  stroke-dasharray: 15 3;
   stroke-width: 3.5;
   opacity: 1;
-  animation: dashRotate 7s linear infinite;
-}
-
-@keyframes dashRotate {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: 18;
-  }
 }
 
 .dp-node-card:hover .dp-hex-glow {
@@ -234,10 +223,26 @@
   opacity: 1;
 }
 
+.dp-node.center .dp-node-card:hover .dp-hex-glow {
+  filter: 
+    drop-shadow(0 0 6px rgba(255, 255, 255, 1))
+    drop-shadow(0 0 12px rgba(255, 255, 255, 1))
+    drop-shadow(0 0 18px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 24px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 30px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 36px rgba(255, 255, 255, 0.4)) !important;
+  stroke-width: 3.5 !important;
+}
+
 .dp-node-svg-outer {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.dp-hex-outer {
+  stroke: #999999;
+  stroke-width: 1;
 }
 
 .dp-node-icon-inner {
@@ -261,9 +266,6 @@
 }
 
 /* Hover effect: brighten hexagon and scale icon */
-.dp-node-card {
-}
-
 .dp-node-card:hover {
   filter: brightness(1.5) contrast(1.1);
   transform: scale(1.05);
@@ -284,6 +286,26 @@
 
 .dp-node-card:hover svg {
   filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9));
+}
+
+/* Disable hover effects for center node */
+.dp-node.center .dp-node-card:hover {
+  filter: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.dp-node.center .dp-node-card:hover .dp-node-icon-inner img {
+  transform: none !important;
+  filter: none !important;
+}
+
+.dp-node.center .dp-node-card:hover .dp-hex-outer {
+  filter: none !important;
+}
+
+.dp-node.center .dp-node-card:hover svg {
+  filter: none !important;
 }
 
 .dp-node-icon-inner .dp-node-label {
@@ -466,6 +488,10 @@
     padding: 5% 20px 0;
     display: flex;
     flex-direction: column;
+  }
+
+  .dp-robot-image {
+    transform: translateY(0px);
   }
 
   .dp-visual {
